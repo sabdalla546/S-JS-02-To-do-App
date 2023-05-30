@@ -10,7 +10,7 @@ if (localStorage.getItem('tasks')) {
 getDataFromLocalStorage();
 btn.addEventListener('click', (e) => {
     e.preventDefault();
-    if (taskName.value !== null && priority.value !== null) {
+    if (taskName.value !== null && priority.value !== null && priority.value > 0) {
         addTaskToArray(taskName.value, priority.value);
         taskName.value = '';
         priority.value = '';
